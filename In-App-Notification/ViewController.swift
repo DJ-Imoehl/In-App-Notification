@@ -12,22 +12,23 @@ class ViewController: UIViewController {
 
     @IBAction func onSuccessClick(_ sender: Any) {
         let notification = Notification()
-        notification.show(parent: self.view, ofType: .Success, withMessage: "This is a success message")
+        notification.show(parent: self.view, ofType: .Success, ofTheme: .Dark, withMessage: "This is a success message")
+        print("Success message shown")
     }
     
     @IBAction func onErrorClick(_ sender: Any) {
         let notification = Notification()
-        notification.show(parent: self.view, ofType: .Error, withMessage: "This is an error message")
+        notification.show(parent: self.view, ofType: .Error, ofTheme: .Light, withMessage: "This is an error message")
     }
     
     @IBAction func onWarningClick(_ sender: Any) {
         let notification = Notification()
-        notification.show(parent: self.view, ofType: .Warning, withMessage: "This is a warning message")
+        notification.show(parent: self.view, ofType: .Warning, ofTheme: .Normal, withMessage: "This is a warning message")
     }
     
     @IBAction func onInformationClick(_ sender: Any) {
         let notification = Notification()
-        notification.show(parent: self.view, ofType: .Information, withMessage: "This is an informational message")
+        notification.show(parent: self.view, ofType: .Information, ofTheme: .Dark, withMessage: "This is an informational message")
     }
     
     override func viewDidLoad() {
